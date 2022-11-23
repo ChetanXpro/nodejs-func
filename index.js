@@ -57,7 +57,7 @@ export const run = async () => {
     // This will find chapter  grandSon chapters (Result => 117 orphan chapters)
 
     parentchapterIds.forEach((item) => {
-      if (orphan.some((i) => i === item.parentChapterId.S)) {
+      if (orphan.find((i) => i === item.parentChapterId.S)) {
         grandchild.push(item.id.S);
       }
     });
@@ -65,7 +65,7 @@ export const run = async () => {
     //  This will find   greatgrandSon chapters but here we got 0 results
 
     parentchapterIds.forEach((item) => {
-      if (grandchild.some((i) => i === item.parentChapterId.S)) {
+      if (grandchild.find((i) => i === item.parentChapterId.S)) {
         greatgrandchild.push(item.id.S);
       }
     });
