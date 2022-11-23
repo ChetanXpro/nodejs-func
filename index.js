@@ -62,7 +62,7 @@ export const run = async () => {
       }
     });
 
-    //  This will find   greatgrandSon chapters but here we got 0 results
+    //  This will find   greatgrandSon chapters here we got 33 results
 
     parentchapterIds.forEach((item) => {
       if (grandchild.find((i) => i === item.parentChapterId.S)) {
