@@ -58,7 +58,7 @@ export const run = async () => {
 
     parentchapterIds.forEach((item) => {
       if (orphan.some((i) => i === item.parentChapterId.S)) {
-        grandchild.push("grand" + item.id.S);
+        grandchild.push(item.id.S);
       }
     });
 
@@ -66,7 +66,7 @@ export const run = async () => {
 
     parentchapterIds.forEach((item) => {
       if (grandchild.some((i) => i === item.parentChapterId.S)) {
-        greatgrandchild.push("great" + item.id.S);
+        greatgrandchild.push(item.id.S);
       }
     });
 
