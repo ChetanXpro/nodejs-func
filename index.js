@@ -17,7 +17,7 @@ export const run = async () => {
   let greatgrandchild = [];
 
   try {
-    // Fetch all data related (id and parentChapterId)
+    // Fetch all data related (id and parentChapterId)..
     const data = await ddbClient.send(new ScanCommand(params));
 
     // count all chapter fetched
